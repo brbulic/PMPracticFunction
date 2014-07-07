@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PMPracticFunction"
-  s.version          = "0.9.4"
+  s.version          = "0.9.5"
   s.summary          = "PMPracticFunction is a collection if Higher order functions that simplify array handling using blocks."
   s.description      = <<-DESC
                        An optional longer description of PMPracticFunction
