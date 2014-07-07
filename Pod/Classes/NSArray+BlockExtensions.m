@@ -1,9 +1,9 @@
 //
-//  NSArray+RandomMethods.m
+//  NSArray+BlockExtensions.h
 //  BadIcons
 //
-//  Created by Luka Boban on 31/10/13.
-//  Copyright (c) 2013 HolosOne. All rights reserved.
+//  Created by Bruno Bulić on 31/10/13.
+//  Copyright (c) 2013 Pinjamar doo All rights reserved.
 //
 
 #import "NSArray+BlockExtensions.h"
@@ -40,7 +40,7 @@
     NSAssert(map != nil, @"Block must exist");
     
     NSMutableArray * array = [NSMutableArray arrayWithCapacity:self.count];
-    [self enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [self enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id tempUnit = map(obj, idx);
         if (tempUnit != nil) {
             [array addObject:tempUnit];
@@ -56,7 +56,7 @@
     NSAssert(predicate != nil, @"Block must exist");
     
     NSMutableArray * array = [NSMutableArray array];
-    [self enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [self enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if (predicate(obj)) {
             [array addObject:obj];
         }

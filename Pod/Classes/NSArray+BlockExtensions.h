@@ -1,9 +1,9 @@
 //
-//  NSArray+RandomMethods.h
+//  NSArray+BlockExtensions.h
 //  BadIcons
 //
-//  Created by Luka Boban on 31/10/13.
-//  Copyright (c) 2013 HolosOne. All rights reserved.
+//  Created by Bruno Bulić on 31/10/13.
+//  Copyright (c) 2013 Pinjamar doo All rights reserved.
 //
 
 #import "PMDefines.h"
@@ -81,10 +81,41 @@
  */
 - (id)foldLeft:(id)accumulator withConverter:(PMMap2)map;
 
+/**
+ *  Returns weather all elements satisfy a certain condition
+ *
+ *  @param predicate The Condition Tester
+ *
+ *  @return YES if all values satisfy a condition, otherwise NO
+ */
 - (BOOL)allSatisfies:(PMPredicate1)predicate;
+
+/**
+ *  Returns a boolean weather a single element satisfies a value.
+ *
+ *  @param predicate The Condition Tester
+ *
+ *  @return YES if at least one element satisfies a condition, otherwise NO
+ */
 - (BOOL)oneSatisfies:(PMPredicate1)predicate;
 
+/**
+ *  Creates an array of Tuple2<id,NSArray> elements grouped by a condition with a default key comparer.
+ *
+ *  @param keyForItemBlock How to extract a key from elements.
+ *
+ *  @return The grouped array
+ */
 - (NSArray *)groupByKey:(PMMap1)keyForItemBlock;
+
+/**
+ *  Creates an array of Tuple2<id,NSArray> elements grouped by a condition with a custom key comparer.
+ *
+ *  @param keyForItemBlock How to extract a key from elements.
+ *  @param comparator      The custom comparer.
+ *
+ *  @return The grouped array.
+ */
 - (NSArray *)groupByKey:(PMMap1)keyForItemBlock withCustomComparator:(PMPredicate2)comparator;
 
 @end
