@@ -94,8 +94,9 @@
     
     NSMutableArray * result = [NSMutableArray arrayWithCapacity:first];
     
+    const NSUInteger length = self.count - 1;
     [self enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if (idx < first) {
+        if ((length - idx) < first) {
             [result addObject:obj];
         } else {
             *stop = YES;
