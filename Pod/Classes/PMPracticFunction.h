@@ -9,4 +9,5 @@
 #ifdef __OBJC__
     #import "NSArray+BlockExtensions.h"
     #import "Tuple2.h"
+    #import "PMContext.h"
 #endif
