@@ -45,30 +45,30 @@
 }
 
 - (PMFunc (^)(PMFunc1))asFunc1 {
-    return Block_copy(^PMFunc (PMFunc1 argument) {
+    return ^PMFunc (PMFunc1 argument) {
         NSParameterAssert(argument);
-        return Block_copy(^(void) {
+        return ^(void) {
             argument(_context1);
-        });
-    });
+        };
+    };
 }
 
 - (PMFunc (^)(PMFunc2))asFunc2 {
-    return Block_copy(^PMFunc (PMFunc2 argument) {
+    return ^PMFunc (PMFunc2 argument) {
         NSParameterAssert(argument);
-        return Block_copy(^(void) {
+        return ^(void) {
             argument(_context1, _context2);
-        });
-    });
+        };
+    };
 }
 
 - (PMFunc (^)(PMFunc3))asFunc3 {
-    return Block_copy(^PMFunc (PMFunc3 argument) {
+    return ^PMFunc (PMFunc3 argument) {
         NSParameterAssert(argument);
-        return Block_copy(^(void) {
+        return ^(void) {
             argument(_context1, _context2, _context3);
-        });
-    });
+        };
+    };
 }
 
 @end
