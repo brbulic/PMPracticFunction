@@ -12,10 +12,9 @@ Pod::Spec.new do |s|
   s.version          = "0.9.6"
   s.summary          = "PMPracticFunction is a collection if Higher order functions that simplify array handling using blocks."
   s.description      = <<-DESC
-                       An optional longer description of PMPracticFunction
+Ever tired of using NSPredicate ? YES YOU SHOULD BE !
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+Dynamic api requires non-type-safe access of properties and syntax, not very easy for modern IDEs.
                        DESC
   s.homepage         = "https://github.com/brbulic/PMPracticFunction"
   s.license          = 'MIT'
@@ -27,7 +26,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resources = 'Pod/Assets/*.png'
+  #s.resources = 'Pod/Assets/*.png'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
