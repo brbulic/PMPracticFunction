@@ -10,4 +10,5 @@
     #import "NSArray+BlockExtensions.h"
     #import "Tuple2.h"
     #import "PMContext.h"
+    #import "PMOptional.h"
 #endif

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PMPracticFunction"
-  s.version          = "0.9.7"
+  s.version          = "0.9.8"
   s.summary          = "PMPracticFunction is a collection if Higher order functions that simplify array handling using blocks."
   s.description      = <<-DESC
 Ever tired of using NSPredicate ? YES YOU SHOULD BE !

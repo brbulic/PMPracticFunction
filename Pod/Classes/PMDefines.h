@@ -17,6 +17,7 @@ typedef BOOL(^PMPredicate)  ();
 typedef BOOL(^PMPredicate1) (id element);
 typedef BOOL(^PMPredicate2) (id, id);
 
+typedef id  (^PMMap0)       (void);
 typedef id  (^PMMap1)       (id element);
 typedef id  (^PMMap2)       (id element, id element2);
 typedef id  (^PMIndexedMap1)(id element, NSUInteger index);
