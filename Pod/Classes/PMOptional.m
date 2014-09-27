@@ -30,7 +30,11 @@
 
 - (id (^)(PMMap0 map))objectOrDefault {
     return ^id (PMMap0 arg) {
-        return arg();
+        if (_object) {
+            return _object;
+        } else {
+            return arg();
+        };
     };
 }
 

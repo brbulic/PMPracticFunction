@@ -10,6 +10,8 @@
 
 @class PMOptional;
 
+#define PMDefault(x) ^(void)x
+
 @interface PMOptional : NSObject
 
 @property (readonly, getter=checkObject) BOOL hasObject;
